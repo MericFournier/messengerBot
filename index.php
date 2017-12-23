@@ -1,3 +1,5 @@
 <?php
-
-echo 'test ok php';
+echo 'contenu get: ';
+echo '<pre>';
+print_r($_GET);
+echo '</pre>';
