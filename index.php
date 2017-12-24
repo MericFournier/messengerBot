@@ -4,10 +4,11 @@ echo '<pre>';
 print_r($_GET);
 echo '</pre>';
 
-$bot = $_GET['bot'];
+$bot = "5a3eda3de4b03718666a3275";
+$token = "qwYLsCSz8hk4ytd6CPKP4C0oalstMnGdpDjF8YFHPHCieKNc0AfrnjVs91fGuH74";
+$block = "5a3edbcbe4b037186673bf91";
+
 $destinataire = $_GET['destinataire'];
-$block = $_GET['block'];
-$token = $_GET['token'];
 $attribute = $_GET['attribute'];
 $value = $_GET['value'];
 
