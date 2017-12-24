@@ -14,7 +14,7 @@ $value = $_GET['value'];
 
 
 
-$query = "https://api.chatfuel.com/bots/".$bot."/users/".$destinataire."/send?chatfuel_token=".$token."&chatfuel_block_name=".$block."&".$attribute."=".$value;
+$query = "https://api.chatfuel.com/bots/".$bot."/users/".$destinataire."/send?chatfuel_token=".$token."&chatfuel_block_id=".$block."&".$attribute."=".$value;
 echo $query;
 
 function postBroadcast($query) {
