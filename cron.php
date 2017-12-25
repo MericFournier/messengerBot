@@ -38,10 +38,21 @@ foreach ($result as $_result) {
   $value = $_result->value;
   $attribute = $_result->attribute;
   $destinataire = $_result->messenger;
+  $id = $_result->key;
+
+  if ( $id == 1 ) {
+    echo 'already';
+  }
+  else {
 
   $query = "https://afternoon-brook-32181.herokuapp.com/?destinataire=".$destinataire."&attribute=".$attribute."&value=".$value;
   echo $query.'</br>';
    postBroadcast($query);
+
+  $query2 = "http://serveurmericfournier1.altervista.org/cleverbot/remove/inex.php?key=".$id;
+  echo $query2;
+  postBroadcast($query2);
+}
 }
 
 
