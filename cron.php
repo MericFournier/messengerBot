@@ -36,6 +36,7 @@ function postBroadcast($query) {
 foreach ($result as $_result) {
 
   $value = $_result->value;
+  $nvalue = str_replace(' ', '%20', $value);
   $attribute = $_result->attribute;
   $destinataire = $_result->messenger;
   $id = $_result->key;
@@ -45,7 +46,7 @@ foreach ($result as $_result) {
   }
   else {
 
-  $query = "https://afternoon-brook-32181.herokuapp.com/?destinataire=".$destinataire."&attribute=".$attribute."&value=".$value;
+  $query = "https://afternoon-brook-32181.herokuapp.com/?destinataire=".$destinataire."&attribute=".$attribute."&value=".$nvalue;
   echo $query.'</br>';
    postBroadcast($query);
 

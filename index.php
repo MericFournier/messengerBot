@@ -11,10 +11,11 @@ $block = "5a3edbcbe4b037186673bf91";
 $destinataire = $_GET['destinataire'];
 $attribute = $_GET['attribute'];
 $value = $_GET['value'];
+$nvalue = str_replace(' ', '%20', $value);
 
 
 
-$query = "https://api.chatfuel.com/bots/".$bot."/users/".$destinataire."/send?chatfuel_token=".$token."&chatfuel_block_id=".$block."&".$attribute."=".$value;
+$query = "https://api.chatfuel.com/bots/".$bot."/users/".$destinataire."/send?chatfuel_token=".$token."&chatfuel_block_id=".$block."&".$attribute."=".$nvalue;
 echo $query;
 
 function postBroadcast($query) {
